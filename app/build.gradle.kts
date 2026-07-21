@@ -31,7 +31,7 @@ android {
       keyAlias = "upload"
       keyPassword = System.getenv("KEY_PASSWORD")
     }
-   signingConfigs {
+  signingConfigs {
     create("release") {
         val keystorePath = System.getenv("KEYSTORE_PATH") ?: "${rootDir}/my-upload-key.jks"
         storeFile = file(keystorePath)
@@ -41,7 +41,7 @@ android {
     }
 }
 
-  buildTypes {
+buildTypes {
     release {
         isCrunchPngs = false
         isMinifyEnabled = false
@@ -55,15 +55,22 @@ android {
     debug {
     }
 }
+
 compileOptions {
     sourceCompatibility = JavaVersion.VERSION_11
     targetCompatibility = JavaVersion.VERSION_11
-  }
-  buildFeatures {
+}
+
+buildFeatures {
     compose = true
     buildConfig = true
-  }
-  testOptions { unitTests { isIncludeAndroidResources = true } }
+}
+
+testOptions {
+    unitTests {
+        isIncludeAndroidResources = true
+    }
+}
 }
 
 // Configure the Secrets Gradle Plugin to use .env and .env.example files
