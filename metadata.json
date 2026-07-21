@@ -1,0 +1,6 @@
+{
+  "name": "YouTube Channel Launcher",
+  "description": "A simple launcher that opens the specified YouTube channel in the official YouTube app or falls back to the system browser.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

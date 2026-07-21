@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">YouTube Channel Launcher</string>
+    <string name="accessibility_service_desc">Automatically clicks the Create (+) button inside the YouTube app when launched from this application.</string>
+</resources>
